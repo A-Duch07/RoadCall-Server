@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "start": "nodemon",
+        "start": "tsc --project tsconfig.json && node ./out/www.js",
         "build": "tsc --project tsconfig.json"
     },
     "engines": {
