@@ -15,7 +15,7 @@ export class UserService {
         await this.userRepository.deleteUser(userId);
     }
 
-    async getDisconnectedUsers(lat: number, long: number): Promise<number[]> {
-        return await this.userRepository.getDisconnectedUsers(lat, long);
+    async getDisconnectedUsers(lat: number, long: number, userId: number): Promise<number[]> {
+        return await this.userRepository.getDisconnectedUsers(lat, long, userId);
     }
 }

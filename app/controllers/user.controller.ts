@@ -80,22 +80,25 @@ export class UserController {
         this.router.get("/disconnectedUsers", async (req: Request, res: Response, next: NextFunction) => {
             // Validate query and its parameters
             if(Object.keys(req.query).length == 0) {
-                res.status(400).send("Missing longitude and latitude query parameters!");
+                res.status(400).send("Missing longitude, latitude and userId query parameters!");
                 return;
             }
                 
-            if(typeof req.query.lat != 'string' || typeof req.query.lat != 'string') {
-                res.status(400).send("Longitude and latitude query parameters don't have the correct format!");
+            if(typeof req.query.lat != 'string' || typeof req.query.lat != 'string' || typeof req.query.userId != 'string') {
+                res.status(400).send("Longitude, latitude or userId query parameters don't have the correct format!");
                 return;
             }
             
-            // Extract lat and long
+            // Extract lat, long and userId
             const lat: number = +(req.query.lat as String);
             const long: number = +(req.query.long as String);
+            const userId: number = +(req.query.userId as String);
+
+
 
             // Get list of users in a radius around our user
             try {
-                const userIds: number[] = await this.userService.getDisconnectedUsers(lat, long);
+                const userIds: number[] = await this.userService.getDisconnectedUsers(lat, long, userId);
                 res.status(200).json({userIds : userIds});
             } catch(error) {
                 if(error instanceof Error) {
