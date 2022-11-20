@@ -6,7 +6,6 @@
         "types": ["reflect-metadata"],
         "module": "commonjs",
         "moduleResolution": "node",
-        "esModuleInterop": true,
         "sourceRoot": "app",
         "sourceMap": true,
         "outDir": "out",
