@@ -7,7 +7,7 @@ export const AppDataSource = new DataSource({
     host: "us-cdbr-east-06.cleardb.net",
     username: "b5ff0d7f9695c6",
     password: "1cb6a0c0",
-    database: "`heroku_80c16babc8aee5a`",
+    database: "heroku_80c16babc8aee5a",
     synchronize: true,
     logging: false,
     entities: [User],
