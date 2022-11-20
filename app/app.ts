@@ -18,16 +18,16 @@ export class Application {
 
   constructor(@inject(TYPES.UserController) private userController: UserController
   ) {
-    this.app = express();
+    this.app = express.default();
   }
 
   public config(server: http.Server): void {
     // Middlewares configuration
-    this.app.use(logger("dev"));
+    this.app.use(logger.default("dev"));
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
-    this.app.use(cookieParser());
-    this.app.use(cors());
+    this.app.use(cookieParser.default());
+    this.app.use(cors.default());
 
     // Config peer server
     this.peerServer = ExpressPeerServer(server, {
