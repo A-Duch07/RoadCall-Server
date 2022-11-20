@@ -1,5 +1,5 @@
-import { UserRepository } from '@app/repository/user.repository';
-import { TYPES } from '@app/types';
+import { UserRepository } from '../repository/user.repository';
+import { TYPES } from '../types';
 import { inject, injectable } from 'inversify';
 
 @injectable()

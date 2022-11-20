@@ -1,4 +1,4 @@
-import { TYPES } from '@app/types';
+import { TYPES } from '../types';
 import { NextFunction, Request, Response, Router } from 'express';
 import { inject, injectable } from 'inversify';
 import { UserService } from '../services/user.service';

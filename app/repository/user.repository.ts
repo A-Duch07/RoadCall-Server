@@ -1,5 +1,5 @@
-import { AppDataSource } from '@app/data-source';
-import { User } from '@app/entity/User';
+import { AppDataSource } from '../data-source';
+import { User } from '../entity/User';
 import { injectable } from 'inversify';
 import { Repository } from 'typeorm';
 

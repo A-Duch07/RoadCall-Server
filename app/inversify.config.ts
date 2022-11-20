@@ -1,7 +1,7 @@
 import "reflect-metadata";
-import { UserController } from '@app/controllers/user.controller';
-import { UserService } from '@app/services/user.service';
-import { UserRepository } from '@app/repository/user.repository';
+import { UserController } from './controllers/user.controller';
+import { UserService } from './services/user.service';
+import { UserRepository } from './repository/user.repository';
 import { Container } from 'inversify';
 import { Application } from './app';
 import { Server } from './server';
